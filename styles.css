@@ -84,7 +84,7 @@ nav ul li a {
 /* Optional media queries to adjust the size on smaller screens */
 @media (max-width: 768px) {
     .hero {
-        padding: 350px 20px;
+        padding: 325px 20px;
     }
 
     .hero h1 {
