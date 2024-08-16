@@ -81,12 +81,6 @@ nav ul li a {
     object-fit: cover; /* Ensure it covers the container without stretching */
 }
 
-/* Make sure other elements have a higher z-index */
-header, main {
-    position: relative;
-    z-index: 1;
-}
-
 /* Optional media queries to adjust the size on smaller screens */
 @media (max-width: 768px) {
     .hero {
