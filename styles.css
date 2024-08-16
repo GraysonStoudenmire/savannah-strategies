@@ -92,6 +92,8 @@ nav ul li a {
     }
 
     .gif-container {
+        position: fixed;
+        top: 10;
         width: 100vw; /* Full width on smaller screens */
         height: auto;
     }
