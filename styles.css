@@ -3,8 +3,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #d0f3ff, #a9ecff);
-    color: #000;
+    background: #010214;
+    color: #f6f9ff;
+    position: relative; /* Make the body a containing block for absolutely positioned elements */
 }
 
 header {
@@ -27,20 +28,12 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #000;
+    color: #f6f9ff;
     font-weight: 600;
 }
 
-.new-badge {
-    font-size: 10px;
-    color: red;
-    position: absolute;
-    top: -10px;
-    right: -30px;
-}
-
-.get-in-touch {
-    border: 2px solid #000;
+.login {
+    border: 2px solid #b484d7;
     border-radius: 20px;
     padding: 5px 15px;
 }
@@ -66,22 +59,27 @@ nav ul li a {
 .cta-button {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #58dcff;
-    color: #000;
+    background-color: #b484d7;
+    color: #010214;
     font-weight: bold;
     border-radius: 50px;
     text-decoration: none;
 }
 
-.background-shape {
+
+.gif-container {
     position: absolute;
-    top: 50%;
-    right: 0;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(88,220,255,0.2) 0%, rgba(88,220,255,0) 70%);
+    top: 67%;
+    right: 10px;
     transform: translateY(-50%);
-    clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 50% 75%, 0 100%, 0 25%);
+    width: 800px; /* Adjust size as needed */
+    height: auto;
+}
+
+.homepage-gif {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: Adds rounded corners to the image */
 }
 
 @media (max-width: 768px) {
@@ -101,4 +99,10 @@ nav ul li a {
     header {
         justify-content: space-between;
     }
+
+    .gif-container {
+        right: 30px;
+        width: 200px; /* Adjust size for smaller screens */
+    }
 }
+
