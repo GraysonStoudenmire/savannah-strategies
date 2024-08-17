@@ -1,4 +1,39 @@
 /* Global Styles */
+@font-face {
+    font-family: 'Garamond Pro';
+    src: url('fonts/AGaramondPro-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Garamond Pro';
+    src: url('fonts/AGaramondPro-Bold.otf') format('opentype');
+    font-weight: bold; /* This specifies that this is the bold version */
+    font-style: normal;
+}
+
+/* General styles for all pages */
+body, p, ul, li, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Garamond Pro', serif; /* Apply Garamond to all text elements */
+    font-weight: normal; /* Default to Garamond Regular */
+}
+
+/* Bold headings */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold; /* Apply Garamond Bold to all headings */
+}
+
+/* Footer content styling */
+.footer-content p, .footer-content a {
+    font-family: 'Garamond Pro', serif;
+    font-weight: normal;
+}
+
+main {
+    padding-bottom: 80px; /* Adjust this value based on the height of your footer */
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -11,7 +46,14 @@ body {
 header {
     padding: 20px 40px;
     display: flex;
-    justify-content: flex-end;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between items to keep the login button on the right */
+}
+
+.nav-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Center the nav items horizontally */
 }
 
 nav ul {
@@ -28,31 +70,73 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
+    color: #f6f9ff; /* Original text color */
+    font-family: 'Garamond Pro', serif;
+    font-weight: 400;
+    transition: color 0.3s ease; /* Smooth transition for the color change */
+}
+
+nav ul li a:hover {
+    color: #d0d4e3; /* Slightly darker shade of the original color on hover */
+}
+
+footer {
+    background-color: #010214;
     color: #f6f9ff;
-    font-weight: 600;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Keep the logo aligned to the left */
+}
+
+.logo {
+    max-height: 50px; /* Adjust the size of the logo as needed */
+    height: auto;
+    width: auto;
 }
 
 .login {
-    border: 2px solid #b484d7;
+    background-color: #b484d7; /* Same purple color as the border */
+    color: #ffffff; /* White text color */
+    border: none; /* Remove the border */
     border-radius: 20px;
-    padding: 5px 15px;
+    padding: 10px 50px;
+    text-decoration: none;
+    font-family: 'Garamond Pro', serif;
+    font-weight: 500; /* Match the font weight to other nav items */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.login:hover {
+    background-color: #9a6eb5; /* Slightly darker purple on hover */
 }
 
 .hero {
     text-align: left;
-    padding: 100px 40px;
-    max-width: 600px;
+    padding: 175px 200px;
+    max-width: 770px;
 }
 
 .hero h1 {
-    font-size: 56px;
-    font-weight: 200;
-    margin-bottom: 20px;
-    line-height: 1.2;
+    font-family: 'Garamond Pro', serif; /* Use the custom font */
+    font-size: 92px; /* Your existing font-size */
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.1;
 }
 
 .hero p {
-    font-size: 18px;
+    font-family: 'Garamond Pro', serif;
+    font-size: 22px;
+    font-weight: normal;
     margin-bottom: 40px;
 }
 
@@ -73,7 +157,8 @@ nav ul li a {
     right: 0;
     width: 50vw; /* Adjust this value to control the width */
     height: auto;
-    z-index: -1; /* Ensures the GIF is behind other content */}
+    z-index: -1; /* Ensures the GIF is behind other content */
+}
 
 .homepage-gif {
     width: 100%;
@@ -81,10 +166,160 @@ nav ul li a {
     object-fit: cover; /* Ensure it covers the container without stretching */
 }
 
+/* Research Page */
+.research-title {
+    font-family: 'Garamond Pro', serif;
+    font-weight: bold;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.research-list {
+    list-style-type: none;
+    padding: 0;
+    font-family: 'Garamond Pro', serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.research-list li {
+    margin-bottom: 10px;
+}
+
+/* Make the research paper links white */
+.research-list a {
+    color: #ffffff; /* Change link color to white */
+    text-decoration: none; /* Remove underline */
+}
+
+.research-list a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.content.centered {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.about-title {
+    font-family: 'Garamond Pro', serif;
+    font-weight: bold;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-family: 'Garamond Pro', serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Contact Us Page */
+.contact-title {
+    font-family: 'Garamond Pro', serif;
+    font-weight: bold;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+    font-family: 'Garamond Pro', serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contact-list li {
+    margin-bottom: 10px;
+}
+
+/* Make the email link white */
+.contact-list a {
+    color: #b484d7; /* Change link color to white */
+    text-decoration: none; /* Remove underline */
+}
+
+.contact-list a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    margin: 5px 0; /* Space out the paragraphs */
+    font-family: 'Garamond Pro', serif;
+    font-size: 14px;
+}
+
+.footer-content a {
+    color: #b484d7; /* Use a consistent color for links */
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Styles for the login form */
+#login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: 'Garamond Pro', serif;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-family: 'Garamond Pro', serif;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#login-form button {
+    padding: 10px 20px;
+    font-family: 'Garamond Pro', serif;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #b484d7;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#login-form button:hover {
+    background-color: #9a6eb5;
+}
+
 /* Optional media queries to adjust the size on smaller screens */
 @media (max-width: 768px) {
     .hero {
-        padding: 325px 20px;
+        padding: 50px 20px;
     }
 
     .hero h1 {
@@ -92,7 +327,6 @@ nav ul li a {
     }
 
     .gif-container {
-
         width: 100vw; /* Full width on smaller screens */
         height: auto;
     }
